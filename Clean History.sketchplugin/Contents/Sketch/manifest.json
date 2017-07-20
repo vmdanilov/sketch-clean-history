@@ -1,0 +1,44 @@
+{
+  "name": "Clean History",
+  "description": "Automatically delete old document versions to recover free space.",
+  "author": "Vlad Danilov",
+  "authorEmail" : "vladmdanilov@gmail.com",
+  "homepage": "http://designplugins.com/sketch-clean-history",
+  "appcast": "https://designplugins.com/sketch-clean-history/appcast.xml",
+  "version": "1.0.0",
+  "identifier": "com.designplugins.sketch.cleanHistory",
+  "compatibleVersion": "3.8",
+  "bundleVersion": "1",
+  "commands": [
+    {
+      "name": "Clear Revision History…",
+      "identifier": "clearRevisionHistory",
+      "script": "main.js",
+      "handlers": {
+        "run": "clearRevisionHistory"
+      }
+    },
+    {
+      "name": "Auto Clean History",
+      "identifier": "toggleAutoCleanHistory",
+      "script": "main.js",
+      "handlers": {
+        "run": "toggleAutoCleanHistory"
+      }
+    },
+    {
+      "script": "main.js",
+      "handlers": {
+        "actions": {
+          "CloseDocument": "onDocumentClose"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "items": [
+      "clearRevisionHistory",
+      "toggleAutoCleanHistory"
+    ]
+  }
+}
